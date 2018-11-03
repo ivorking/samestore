@@ -2,6 +2,20 @@
   text-align: center;
 }
 
+.RightColumn {
+  float: right;
+  width: 50%;
+}
+
+.LeftColumn {
+  float: left;
+  width: 50%;
+}
+
+.formElements {
+
+}
+
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
@@ -9,7 +23,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;

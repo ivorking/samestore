@@ -1,26 +1,35 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import TopBar from './components/TopNavBar'
+import RightColumn from './components/RightColumn'
+import LeftColumn from './components/LeftColumn'
 import './App.css';
 
 class App extends Component {
+
+  // basic storage of left and right props
+  state = {
+    leftcolumn: {},
+    rightcolumn: {}
+  };
+
   render() {
     return (
       <div className="App">
+        <TopBar />
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
           <p>
-            Edit <code>src/App.js</code> and save to reload.
+            Compare the store!
           </p>
-          <LeftColumn />
           <a
             className="App-link"
             href="https://reactjs.org"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Learn React
           </a>
         </header>
+        <LeftColumn />
+        <RightColumn />
       </div>
     );
   }
