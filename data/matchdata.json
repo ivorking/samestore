@@ -1,5 +1,14 @@
 {
-   "Coles": "Tesco, Sainbury's, Waitrose",
+   "Coles": [
+      "Tesco",
+      "Sainbury's",
+      "Waitrose"
+   ],
    "KMart": "Primark",
-   "Dick Smith": "Dixons"
+   "Dick Smith": "Dixons",
+   "Dome": [
+      "Costa",
+      "Nero"
+   ],
+   "Bunnings": "Screwfix"
 }

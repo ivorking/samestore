@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
-import TopBar from './components/TopNavBar'
-import RightColumn from './components/RightColumn'
-import LeftColumn from './components/LeftColumn'
+import TopBar from './components/TopNavBar';
+import RightColumn from './components/RightColumn';
+import LeftColumn from './components/LeftColumn';
 import './css/App.css';
-import './css/tachyons.css'
+import './css/tachyons.css';
 
 class App extends Component {
 
   // basic storage of left and right props
   state = {
     leftcolumn: {},
-    rightcolumn: {}
+    rightcolumn: {},
+    voteButton: {}
   };
 
   render() {
@@ -31,6 +32,7 @@ class App extends Component {
         </header>
         <LeftColumn />
         <RightColumn />
+        <VoteButton />
       </div>
     );
   }
