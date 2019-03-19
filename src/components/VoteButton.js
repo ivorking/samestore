@@ -1,4 +1,6 @@
 import React, { Component} from 'react';
+import '../css/App.css';
+import '../css/tachyons.css';
 
 class VoteButton extends Component {
 
@@ -7,11 +9,13 @@ class VoteButton extends Component {
         this.state = {
             ticked: 'unticked'
         };
-        this.handleChange = this.handleChange.bind(this);
+        // this.handleChange = this.handleChange.bind(this);
     }
 
-    handleClick = () => {
+    handleClick() {
         // clicking on voting for association between stores
+        console.log('button pressed');
+        console.log(this.state.ticked);
     }
 
     onChange() {
@@ -20,8 +24,8 @@ class VoteButton extends Component {
 
     render() {
         return (
-            <div>
-                <button onClick = {handleClick}>src=</button>
+            <div className = "buttonPos">
+                <button className = "ph3 mt4 f6 link dim ba ph3 pv2 mb2 dib black" href="#0" onClick = {this.handleClick}>Click to upvote this match!</button>
             </div>
         )
     }

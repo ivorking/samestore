@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import TopBar from './components/TopNavBar';
 import RightColumn from './components/RightColumn';
 import LeftColumn from './components/LeftColumn';
+import VoteButton from './components/VoteButton'
 import './css/App.css';
 import './css/tachyons.css';
 

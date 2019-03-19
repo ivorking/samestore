@@ -8,6 +8,7 @@
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "^2.1.8",
+    "react-select": "^2.4.2",
     "styled-components": "^4.0.3",
     "tachyons": "^4.11.1"
   },
