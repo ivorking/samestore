@@ -12,7 +12,6 @@
             "runtimeExecutable": "/usr/bin/chromium",
             "url": "http://localhost:3000",
             "port": "9222",
-            "userDataDir": "true"
         }
     ]
 }
