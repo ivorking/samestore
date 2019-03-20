@@ -20,14 +20,11 @@ class LeftColumn extends Component {
 
   render() {
 
-    var stores = JSON.parse(matchdata);
-
-    // var stores = [
-      // { value: 'coles', label: 'Coles' },
-      // { value: 'dick smith', label: 'Dick Smith' },
-      // { value: 'target', label: 'Target' }
-    // ]
-    debugger;
+    var inputdata = Object.keys(matchdata);
+    const stores = inputdata.map(v => ({
+      label: v,
+      value: v
+    }));
 
     return (
       <nav className = "LeftColumn pa4 black-80">

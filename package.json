@@ -5,6 +5,7 @@
   "homepage": "https://ivorking.github.io/samestore",
   "dependencies": {
     "gh-pages": "^2.0.1",
+    "json-loader": "^0.5.7",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
     "react-router": "^4.3.1",

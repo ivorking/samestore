@@ -1,0 +1,9 @@
+2019/03/20-23:01:15.952 218d Reusing MANIFEST /home/ivor/Dev/samestore/true/Default/Session Storage/MANIFEST-000001
+2019/03/20-23:01:15.952 218d Recovering log #3
+2019/03/20-23:01:15.952 218d Reusing old log /home/ivor/Dev/samestore/true/Default/Session Storage/000003.log 
+2019/03/20-23:05:22.008 2402 Level-0 table #5: started
+2019/03/20-23:05:22.016 2402 Level-0 table #5: 16416 bytes OK
+2019/03/20-23:05:22.020 2402 Delete type=0 #3
+2019/03/20-23:23:58.108 2402 Level-0 table #7: started
+2019/03/20-23:23:58.112 2402 Level-0 table #7: 15967 bytes OK
+2019/03/20-23:23:58.116 2402 Delete type=0 #4
