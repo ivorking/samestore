@@ -8,7 +8,6 @@ import './css/tachyons.css';
 
 class App extends Component {
 
-  // basic storage of left and right props
   state = {
     leftcolumn: {},
     rightcolumn: {},
