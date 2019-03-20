@@ -27,6 +27,7 @@ class LeftColumn extends Component {
       // { value: 'dick smith', label: 'Dick Smith' },
       // { value: 'target', label: 'Target' }
     // ]
+    debugger;
 
     return (
       <nav className = "LeftColumn pa4 black-80">
