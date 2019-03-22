@@ -1,25 +1,41 @@
 import React, { Component } from 'react';
-// import TopBar from './components/TopNavBar';
-import Joke from './Joke'
+import TopBar from './components/TopNavBar';
+import RightColumn from './components/RightColumn';
+import LeftColumn from './components/LeftColumn';
+import VoteButton from './components/VoteButton'
 import './css/App.css';
 import './css/tachyons.css';
 
-function App() {
+class App extends Component {
 
-   const nums = [1, 2, 3, 4, 5];
-   const doubled = nums.map(function(nums) {
-      return nums * 2;
-   })
+  state = {
+    leftcolumn: {},
+    rightcolumn: {},
+    voteButton: {}
+  };
 
-   return (
-      <div>
-         <Joke question = "Why did the joke" answer = "No idea why" />
-         <Joke answer = "why not react" />
-         <Joke question = "why not" answer = "probably" />
-         <Joke question = "random data" answer = "i don't think so" />
-         <Joke question = "nonsense question" answer = "i don't agree" />
+  render() {
+    return (
+      <div className="App">
+        <TopBar />
+        <header className="App-header">
+          <p>
+            Compare the store!
+          </p>
+          <a
+            className="App-link"
+            href="https://reactjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+          </a>
+        </header>
+        <LeftColumn />
+        <RightColumn />
+        <VoteButton />
       </div>
-   )
+    );
+  }
 }
 
 export default App;
