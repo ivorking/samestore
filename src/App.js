@@ -10,6 +10,10 @@ import matchdata from './data/matchdata.json';
 import './css/App.css';
 import './css/tachyons.css';
 
+// Database: prisma, graphQL - relational, bidirectional
+// Location API for location data where user is to populate left hand field
+// Percentage match, allow prediction with GraphQL
+
 class App extends Component {
 
   state = {
