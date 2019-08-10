@@ -3,9 +3,12 @@ import TopBar from './components/TopNavBar';
 import RightColumn from './components/RightColumn';
 import LeftColumn from './components/LeftColumn';
 import VoteButton from './components/VoteButton'
+import matchdata from './data/matchdata.json';
+
+// CSS imports
+// import './css/index.css';
 import './css/App.css';
 import './css/tachyons.css';
-import matchdata from './data/matchdata.json';
 
 class App extends Component {
 
