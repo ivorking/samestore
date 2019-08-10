@@ -5,6 +5,7 @@ import LeftColumn from './components/LeftColumn';
 import VoteButton from './components/VoteButton'
 import './css/App.css';
 import './css/tachyons.css';
+import matchdata from './data/matchdata.json';
 
 class App extends Component {
 
@@ -12,11 +13,13 @@ class App extends Component {
     leftcolumn: {},
     rightcolumn: {},
     voteButton: {},
-    leftSelection: ''
+    leftSelection: '',
+    rightSelection: ''
   };
 
   valUpdater = (leftVal) => {
-    this.setState({leftSelection: leftVal})
+    let rightvar = matchdata[leftVal]
+    this.setState({rightSelection: rightvar})
   }
 
   componentDidUpdate = () => {
@@ -24,8 +27,8 @@ class App extends Component {
   }
 
   render() {
-      // const entryvar = "muggins"
-    const { infoVar } = this.state;
+
+    const { rightSelection } = this.state
     return (
       <div className="App">
         <TopBar />
@@ -42,7 +45,7 @@ class App extends Component {
           </a>
         </header>
         <LeftColumn infoVar={this.valUpdater} />
-        <RightColumn />
+        <RightColumn rightSelection={rightSelection}/>
         <VoteButton />
       </div>
     );

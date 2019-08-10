@@ -4,30 +4,21 @@ import matchdata from '../data/matchdata.json';
 
 class LeftColumn extends Component {
 
-  // constructor(props) {
-  //   super(props);
   state = {
     store: 'coles',
     country: 'australia',
-    selectedOption: null
+    selectedOption: ''
   }
-    // };
-
-    // this.handleChange = this.handleChange.bind(this);
 
   handleChange = (event) => {
     this.setState({ [event.target.name ]: event.target.value })
   }
 
   handleSelection = selectedOption => {
-    // this.setState({ selectedOption });
-    // this.props.infoVar = selectedOption.value;
-    console.log(`Option selected:`, selectedOption);
     this.props.infoVar(selectedOption.value)
   };
 
   componentDidUpdate = () => {
-    console.log('updated');
   }
 
   render() {
@@ -50,11 +41,10 @@ class LeftColumn extends Component {
             <div className="mt3">
               <label className="db fw6 lh-copy f6 tl">Store name:</label>
               <Select 
-                value={selectedOption}
+                value={this.selectedOption}
                 onChange={this.handleSelection}
                 options={stores}
               />
-              {/* <input className="pa2 input-reset ba bg-transparent" type="text" name="store" value={this.state.store} onChange={this.handleSelection} /> */}
             </div>
             <div className="mt3">
               <label className="db fw6 lh-copy f6 tl">Country name:</label>
@@ -62,7 +52,6 @@ class LeftColumn extends Component {
             </div>
           </fieldset>
         </form>
-        {/* {this.props.infoVar = selectedOption}; */}
       </nav>
     )
   }

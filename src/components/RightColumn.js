@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
 class RightColumn extends Component {
+
+  state = {
+  }
+
   render() {
+    console.log(this.props.rightSelection);
     return (
-
-      // <nav className="RightColumn pa4 black-80">
-      //   We've found the following equivalent...
-      // </nav>
-
       <nav className = "RightColumn pa4 black-80">
 
         <div>
@@ -18,7 +18,7 @@ class RightColumn extends Component {
           <fieldset className="ba b--transparent ph0 mh0">
             <div className="mt3">
               <label className="db fw6 lh-copy f6 tl">Store name:</label>
-              <input className="pa2 input-reset ba bg-transparent" type="text" name="country" value="" />
+              <input className="pa2 input-reset ba bg-transparent" type="text" name="storevalue" value={this.props.rightSelection} />
             </div>
             <div className="mt3">
               <label className="db fw6 lh-copy f6 tl">Country name:</label>
