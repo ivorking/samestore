@@ -11,7 +11,7 @@ class RightColumn extends Component {
       <nav className = "RightColumn pa4 black-80">
 
         <div>
-          Enter the store you're finding an equivalent for...
+          We've found the following match...
         </div>
 
         <form className="measure center">
