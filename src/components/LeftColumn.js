@@ -16,13 +16,14 @@ class LeftColumn extends Component {
     // this.handleChange = this.handleChange.bind(this);
 
   handleChange = (event) => {
-    console.log('updated2')
     this.setState({ [event.target.name ]: event.target.value })
   }
 
   handleSelection = selectedOption => {
-    this.setState({ selectedOption });
+    // this.setState({ selectedOption });
+    // this.props.infoVar = selectedOption.value;
     console.log(`Option selected:`, selectedOption);
+    this.props.infoVar(selectedOption.value)
   };
 
   componentDidUpdate = () => {
@@ -41,6 +42,7 @@ class LeftColumn extends Component {
     return (
       <nav className = "LeftColumn pa4 black-80">
         <div>
+          {this.props.infoVar}
           Enter the store you're finding an equivalent for...
         </div>
         <form className="measure center">
@@ -60,6 +62,7 @@ class LeftColumn extends Component {
             </div>
           </fieldset>
         </form>
+        {/* {this.props.infoVar = selectedOption}; */}
       </nav>
     )
   }

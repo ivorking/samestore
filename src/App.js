@@ -11,10 +11,21 @@ class App extends Component {
   state = {
     leftcolumn: {},
     rightcolumn: {},
-    voteButton: {}
+    voteButton: {},
+    leftSelection: ''
   };
 
+  valUpdater = (leftVal) => {
+    this.setState({leftSelection: leftVal})
+  }
+
+  componentDidUpdate = () => {
+    console.log('parent updated');
+  }
+
   render() {
+      // const entryvar = "muggins"
+    const { infoVar } = this.state;
     return (
       <div className="App">
         <TopBar />
@@ -30,7 +41,7 @@ class App extends Component {
           >
           </a>
         </header>
-        <LeftColumn />
+        <LeftColumn infoVar={this.valUpdater} />
         <RightColumn />
         <VoteButton />
       </div>
