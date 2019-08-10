@@ -4,23 +4,35 @@ import matchdata from '../data/matchdata.json';
 
 class LeftColumn extends Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      store: 'coles',
-      country: 'australia'
-    };
+  // constructor(props) {
+  //   super(props);
+  state = {
+    store: 'coles',
+    country: 'australia',
+    selectedOption: null
+  }
+    // };
 
-    this.handleChange = this.handleChange.bind(this);
+    // this.handleChange = this.handleChange.bind(this);
+
+  handleChange = (event) => {
+    console.log('updated2')
+    this.setState({ [event.target.name ]: event.target.value })
   }
 
-  handleChange(event) {
-    this.setState({ [event.target.name ]: event.target.value })
+  handleSelection = selectedOption => {
+    this.setState({ selectedOption });
+    console.log(`Option selected:`, selectedOption);
+  };
+
+  componentDidUpdate = () => {
+    console.log('updated');
   }
 
   render() {
 
     var inputdata = Object.keys(matchdata);
+    const { selectedOption } = this.state;
     const stores = inputdata.map(v => ({
       label: v,
       value: v
@@ -35,8 +47,12 @@ class LeftColumn extends Component {
           <fieldset className="ba b--transparent ph0 mh0">
             <div className="mt3">
               <label className="db fw6 lh-copy f6 tl">Store name:</label>
-              <Select options = {stores} />
-              {/* <input className="pa2 input-reset ba bg-transparent" type="text" name="store" value={this.state.store} onChange={this.handleChange} /> */}
+              <Select 
+                value={selectedOption}
+                onChange={this.handleSelection}
+                options={stores}
+              />
+              {/* <input className="pa2 input-reset ba bg-transparent" type="text" name="store" value={this.state.store} onChange={this.handleSelection} /> */}
             </div>
             <div className="mt3">
               <label className="db fw6 lh-copy f6 tl">Country name:</label>
