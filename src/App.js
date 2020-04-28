@@ -6,6 +6,7 @@ import VoteButton from './components/VoteButton'
 import matchdata from './data/matchdata.json';
 import BottomLeft from './components/BottomLeft';
 import BottomRight from './components/BottomRight';
+import Typography from '@material-ui/core/Typography';
 
 // CSS imports
 // import './css/index.css';
@@ -42,9 +43,11 @@ class App extends Component {
       <div className="App">
         {/* <TopBar /> */}
         <header className="App-header">
-          <p>
-            Compare the store!
-          </p>
+        <Typography variant="h6" color="inherit" noWrap>
+            <p>
+              Compare the store!
+            </p>
+          </Typography>
           <a
             className="App-link"
             href="https://reactjs.org"

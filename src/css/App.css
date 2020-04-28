@@ -29,6 +29,10 @@ form {
   margin-top: 270px;
 }
 
+.Pref-color {
+  background-color: #1976d2;
+}
+
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
@@ -41,8 +45,8 @@ form {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
+  background-color: #1976d2;
 }
 
 .App-link {

@@ -9,7 +9,6 @@ class RightColumn extends Component {
     console.log(this.props.rightSelection);
     return (
       <nav className = "RightColumn pt4-ns black-80">
-
         <div className = "h2-ns">
           We've found the following match...
         </div>
