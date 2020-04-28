@@ -31,8 +31,8 @@ class LeftColumn extends Component {
     }));
 
     return (
-      <nav className = "LeftColumn pa4 black-80">
-        <div>
+      <nav className = "LeftColumn pt4-ns black-80">
+        <div className = "h2-ns">
           {this.props.infoVar}
           Enter the store you're finding an equivalent for...
         </div>

@@ -6,6 +6,7 @@ import VoteButton from './components/VoteButton'
 import matchdata from './data/matchdata.json';
 import BottomLeft from './components/BottomLeft';
 import BottomRight from './components/BottomRight';
+
 // CSS imports
 // import './css/index.css';
 import './css/App.css';
@@ -54,9 +55,9 @@ class App extends Component {
         </header>
         <LeftColumn infoVar={this.valUpdater} />
         <RightColumn rightSelection={rightSelection}/>
+        <VoteButton />
         <BottomLeft />
         <BottomRight />
-        <VoteButton />
       </div>
     );
   }

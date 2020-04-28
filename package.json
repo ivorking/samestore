@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://ivorking.github.io/samestore",
   "dependencies": {
+    "@material-ui/core": "^4.9.12",
     "gh-pages": "^2.0.1",
     "json-loader": "^0.5.7",
     "react": "^16.6.0",
