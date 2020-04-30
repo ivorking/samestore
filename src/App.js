@@ -6,7 +6,15 @@ import VoteButton from './components/VoteButton'
 import matchdata from './data/matchdata.json';
 import BottomLeft from './components/BottomLeft';
 import BottomRight from './components/BottomRight';
+import Home from './components/Home';
+import About from './components/About';
+import Data from './components/Data';
 import Typography from '@material-ui/core/Typography';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
 
 // CSS imports
 // import './css/index.css';
@@ -40,28 +48,43 @@ class App extends Component {
 
     const { rightSelection } = this.state
     return (
-      <div className="App">
-        {/* <TopBar /> */}
-        <header className="App-header">
-        <Typography variant="h6" color="inherit" noWrap>
-            <p>
-              Compare the store!
-            </p>
-          </Typography>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-          </a>
-        </header>
-        <LeftColumn infoVar={this.valUpdater} />
-        <RightColumn rightSelection={rightSelection}/>
-        <VoteButton />
-        <BottomLeft />
-        <BottomRight />
-      </div>
+      <Router>
+        <div className="App">
+          {/* <TopBar /> */}
+          <header className="App-header">
+          <Typography variant="h6" color="inherit" noWrap>
+              <p>
+                Compare the store!
+              </p>
+            </Typography>
+            <a
+              className="App-link"
+              href="https://reactjs.org"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+            </a>
+          </header>
+          <LeftColumn infoVar={this.valUpdater} />
+          <RightColumn rightSelection={rightSelection}/>
+          <VoteButton />
+
+          {/* Router for bottom panel */}
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route path="/about">
+              <About />
+            </Route>
+            <Route path="/data">
+              <Data />
+            </Route>
+          </Switch>
+          
+          <BottomLeft />
+        </div>
+      </Router>
     );
   }
 }
