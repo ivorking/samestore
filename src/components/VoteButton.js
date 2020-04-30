@@ -29,12 +29,14 @@ class VoteButton extends Component {
         return (
             <div className = "buttonPos">
                 {/* <Button className = "ph3 mt4 f6 link dim ba ph3 pv2 mb2 dib black" href="#0" onClick = {this.handleClick}>Click to upvote this match!</button> */}
+                <span>
                 <Button variant="contained" color="primary" href="#0" onClick = {this.handleClick}>
                     Upvote this match
                 </Button>
                 <Button variant="contained" color="secondary" href="#0" onClick = {this.handleClick}>
                     Report as inaccurate
                 </Button>
+                </span>
             </div>
         )
     }
