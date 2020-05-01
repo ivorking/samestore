@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
-import TopBar from './components/TopNavBar';
 import RightColumn from './components/RightColumn';
 import LeftColumn from './components/LeftColumn';
-import VoteButton from './components/VoteButton'
+import VoteButtons from './components/VoteButtons'
 import matchdata from './data/matchdata.json';
 import BottomLeft from './components/BottomLeft';
-import BottomRight from './components/BottomRight';
 import Home from './components/Home';
 import About from './components/About';
 import Data from './components/Data';
 import Typography from '@material-ui/core/Typography';
+import RightCounter from './components/RightCounter';
 import {
   BrowserRouter as Router,
   Switch,
@@ -67,7 +66,9 @@ class App extends Component {
           </header>
           <LeftColumn infoVar={this.valUpdater} />
           <RightColumn rightSelection={rightSelection}/>
-          <VoteButton />
+          <VoteButtons />
+
+          <BottomLeft />
 
           {/* Router for bottom panel */}
           <Switch>
@@ -82,7 +83,7 @@ class App extends Component {
             </Route>
           </Switch>
           
-          <BottomLeft />
+          <RightCounter />
         </div>
       </Router>
     );

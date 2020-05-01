@@ -4,7 +4,7 @@ import Button from '@material-ui/core/Button';
 import '../css/App.css';
 import '../css/tachyons.css';
 
-class VoteButton extends Component {
+class VoteButtons extends Component {
 
     constructor(props) {
         super(props);
@@ -29,17 +29,19 @@ class VoteButton extends Component {
         return (
             <div className = "buttonPos">
                 {/* <Button className = "ph3 mt4 f6 link dim ba ph3 pv2 mb2 dib black" href="#0" onClick = {this.handleClick}>Click to upvote this match!</button> */}
-                <span>
-                <Button variant="contained" color="primary" href="#0" onClick = {this.handleClick}>
-                    Upvote this match
-                </Button>
-                <Button variant="contained" color="secondary" href="#0" onClick = {this.handleClick}>
-                    Report as inaccurate
-                </Button>
-                </span>
+                <div>
+                    <Button variant="contained" color="primary" href="#0" onClick = {this.handleClick}>
+                        Upvote this match
+                    </Button>
+                    </div>
+                <div className = "mt3">
+                    <Button variant="contained" color="secondary" href="#0" onClick = {this.handleClick}>
+                        Report as inaccurate
+                    </Button>
+                </div>
             </div>
         )
     }
 }
 
-export default VoteButton;
+export default VoteButtons;
