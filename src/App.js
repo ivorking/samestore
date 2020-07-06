@@ -19,6 +19,7 @@ import {
 // import './css/index.css';
 import './css/App.css';
 import './css/tachyons.css';
+import 'tachyons-skins';
 
 // Database: prisma, graphQL - relational, bidirectional
 // Location API for location data where user is to populate left hand field
