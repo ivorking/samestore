@@ -35,6 +35,7 @@ class App extends Component {
     rightSelection: ''
   };
 
+  
   valUpdater = (leftVal) => {
     let rightvar = matchdata[leftVal]
     this.setState({rightSelection: rightvar})
