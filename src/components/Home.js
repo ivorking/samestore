@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 const Home = props => (
-    <div className = 'bottom-0 fixed w-50 h-25 inline-flex items-center justify-center bottom-0-l bg-blue'>
+    <div className = 'inline-flex ma0 bottom-0 bg-green fixed'>
         Home section
     </div>
 )
