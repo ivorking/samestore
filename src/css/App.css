@@ -25,6 +25,10 @@ form {
   display: inline-block;
 }
 
+.MidPosition {
+  margin-left: 25%;
+}
+
 .buttonPos {
   margin-top: 270px;
 }

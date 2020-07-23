@@ -74,17 +74,16 @@ class App extends Component {
 
           {/* Router for bottom panel */}
           <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route path="/about">
-              <About />
-            </Route>
-            <Route path="/data">
-              <Data />
-            </Route>
+              <Route exact path="/">
+                <Home />
+              </Route>
+              <Route path="/about">
+                <About />
+              </Route>
+              <Route path="/data">
+                <Data />
+              </Route>
           </Switch>
-          
           <RightCounter />
         </div>
       </Router>
