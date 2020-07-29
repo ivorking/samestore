@@ -1,14 +1,16 @@
 {
-   "Coles": [
-      "Tesco",
-      "Sainbury's",
-      "Waitrose"
-   ],
-   "KMart": "Primark",
-   "Dick Smith": "Dixons",
-   "Dome": [
-      "Costa",
-      "Nero"
-   ],
-   "Bunnings": "Screwfix"
+   "Australia": {
+      "Coles": [
+         "Tesco",
+         "Sainbury's",
+         "Waitrose"
+      ],
+      "KMart": "Primark",
+      "Dick Smith": "Dixons",
+      "Dome": [
+         "Costa",
+         "Nero"
+      ],
+      "Bunnings": "Screwfix"
+   },
 }

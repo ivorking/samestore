@@ -40,7 +40,7 @@ class LeftColumn extends Component {
           <fieldset className="ba b--transparent ph0 mh0">
             <div className="mt3">
               <label className="db fw6 lh-copy f6 tl">Store name:</label>
-              <Select 
+              <Select className = 'tl'
                 value={this.selectedOption}
                 onChange={this.handleSelection}
                 options={stores}
