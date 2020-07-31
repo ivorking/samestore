@@ -1,16 +1,41 @@
 {
    "Australia": {
-      "Coles": [
-         "Tesco",
-         "Sainbury's",
-         "Waitrose"
-      ],
-      "KMart": "Primark",
-      "Dick Smith": "Dixons",
-      "Dome": [
-         "Costa",
-         "Nero"
-      ],
-      "Bunnings": "Screwfix"
+      "UK": {
+         "Coles": [
+            "Tesco",
+            "Sainburys",
+            "Waitrose"
+         ],
+         "KMart": "Primark",
+         "Dick Smith": "Dixons",
+         "Dome": [
+            "Costa",
+            "Nero"
+         ],
+         "Bunnings": "Screwfix"
+      },
+      "South Africa": {
+         "Coles": [
+            "Spar",
+            "Checkers"
+         ],
+         "KMart": [
+            "Pick n Pay",
+            "Game"
+         ]
+      }
    },
+   "UK": {
+      "Australia": {
+         "Tesco": [
+            "Coles",
+            "Big W",
+            "IGA"
+         ],
+         "Carphone warehouse": [
+            "Dick Smith",
+            "JB HiFi"
+         ]            
+      }
+   }
 }
