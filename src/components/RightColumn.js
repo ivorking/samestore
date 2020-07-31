@@ -3,6 +3,9 @@ import React, { Component } from 'react';
 class RightColumn extends Component {
 
   state = {
+    rstore: '',
+    rcountry: '',
+    selectedOption: ''
   }
 
   render() {
@@ -12,7 +15,6 @@ class RightColumn extends Component {
         <div className = "h2-ns">
           We've found the following match...
         </div>
-
         <form className="measure center">
           <fieldset className="ba b--transparent ph0 mh0">
             <div className="mt3">
