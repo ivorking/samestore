@@ -2,20 +2,28 @@ import React, { Component } from 'react';
 import Select from 'react-select';
 import matchdata from '../data/matchdata.json';
 
-class LeftColumn extends Component {
+class LeftColumn extends React.Component {
 
-  state = {
-    lstore: '',
-    lcountry: '',
-    selectedOption: ''
+  constructor(props) {
+    super(props);
+    this.state = {
+      selectedOptionCountry: "Australia",
+      selectedOptionStore: "KMart"
+    }
   }
 
   handleChange = (event) => {
     this.setState({ [event.target.name ]: event.target.value })
   }
 
-  handleSelection = selectedOption => {
-    this.props.infoVar(selectedOption.value)
+  handleSelectionCountry = selectedOptionCountry => {
+    this.props.infoVar(selectedOptionCountry.value)
+    this.lcountry = selectedOptionCountry.value
+  };
+
+  handleSelectionStore = selectedOptionStore => {
+    this.props.infoVar(selectedOptionStore.value)
+    this.lstore = selectedOptionStore.value
   };
 
   componentDidUpdate = () => {
@@ -24,15 +32,16 @@ class LeftColumn extends Component {
   render() {
 
     var inputdataCountries = Object.keys(matchdata);
-    const { selectedOptionCountry } = this.state;
-    const lcountries = inputdataCountries.map(v => ({
+    var { selectedOptionCountry } = this.state;
+    var lcountries = inputdataCountries.map(v => ({
       label: v,
       value: v
     }));
 
-    var inputdataStores = Object.keys(matchdata);
-    const { selectedOptionStore } = this.state;
-    const lstores = inputdataStores.map(v => ({
+    // fix this
+    let tempHold = "Australia"
+    var inputdataStores = this.Object.keys(matchdata.tempHold.UK);
+    var lstores = inputdataStores.map(v => ({
       label: v,
       value: v
     }));
@@ -50,7 +59,7 @@ class LeftColumn extends Component {
               {/* <input className="pa2 input-reset ba bg-transparent" type="text" name="country" value={this.state.lcountry} onChange={this.handleChange} /> */}
               <Select className = "tl pa2 input-reset bg-transparent" type="text" name="country" 
                 value={this.selectedOptionCountry}
-                onChange={this.handleSelection}
+                onChange={this.handleSelectionCountry}
                 options={lcountries}
               />
 
@@ -59,7 +68,7 @@ class LeftColumn extends Component {
               <label className="db fw6 lh-copy f6 tl">Store name:</label>
               <Select className = 'tl'
                 value={this.selectedOptionStore}
-                onChange={this.handleSelection}
+                onChange={this.handleSelectionStore}
                 options={lstores}
               />
             </div>
