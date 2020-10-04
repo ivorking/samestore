@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 class RightColumn extends Component {
 
   state = {
-    rstore: '',
-    rcountry: '',
+    rightStore: '',
+    rightCountry: '',
     selectedOption: ''
   }
 
@@ -19,7 +19,7 @@ class RightColumn extends Component {
           <fieldset className="ba b--transparent ph0 mh0">
             <div className="mt3">
               <label className="db fw6 lh-copy f6 tl">Country name:</label>
-              <input className="pa2 input-reset ba bg-transparent" type="text" name="country" value="" />
+              <input className="pa2 input-reset ba bg-transparent" type="text" name="country" value={this.state.rightCountry} />
             </div>
             <div className="mt3">
               <label className="db fw6 lh-copy f6 tl">Store name:</label>
