@@ -12,7 +12,7 @@ class LeftColumn extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      leftCountry: "Australia",
+      leftCountry: "",
       leftStore: "",
       lstores: {},
       lcountries: {},
@@ -32,17 +32,6 @@ class LeftColumn extends React.Component {
     this.props.infoVar(leftStore.value)
   };
 
-  componentDidUpdate() {
-    let templist = [];
-    let countryKeys = Object.keys(matchdata[leftCountry]);
-    let i;
-    for (i = 0 ; i < countryKeys.length ; i++) {
-      templist.push(Object.keys(matchdata[leftCountry][countryKeys[i]]))
-    }
-    this.inputdataStores = templist.flat();
-
-  }
-
   render() {
 
     var inputdataCountries = Object.keys(matchdata);
@@ -51,11 +40,20 @@ class LeftColumn extends React.Component {
       value: v
     }));
 
-    if (this.lstores) {
+    if (leftCountry) {
+      let templist = [];
+      let countryKeys = Object.keys(matchdata[leftCountry]);
+      let i;
+      for (i = 0 ; i < countryKeys.length ; i++) {
+        templist.push(Object.keys(matchdata[leftCountry][countryKeys[i]]))
+      }
+      this.inputdataStores = templist.flat();
+  
       this.lstores = this.inputdataStores.map(v => ({
         label: v,
         value: v
       }));
+  
     }
 
     return (
