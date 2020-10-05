@@ -38,6 +38,8 @@ class App extends Component {
   valUpdater = (leftVal) => {
     let rightvar = matchdata[leftVal]
     this.setState({rightSelection: rightvar})
+    console.log('valupdater running')
+    console.log(leftVal)
   }
 
   componentDidUpdate = () => {

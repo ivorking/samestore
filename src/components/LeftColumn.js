@@ -49,6 +49,7 @@ class LeftColumn extends React.Component {
 
   handleSelectionStore = leftStore => {
     this.props.infoVar(leftStore)
+    console.log('firing')
   };
 
   render() {
